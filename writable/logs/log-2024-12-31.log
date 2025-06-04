@@ -1,0 +1,76 @@
+CRITICAL - 2024-12-31 02:10:01 --> ErrorException: Undefined array key "jk"
+[Method: GET, Route: detail-lab/23]
+in APPPATH\Views\main\v_detail_lab.php on line 52.
+ 1 APPPATH\Views\main\v_detail_lab.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jk"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php', 52)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_lab', [], true)
+ 5 APPPATH\Controllers\Main.php(253): view('Main/v_detail_lab', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_lab('23')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-31 02:10:05 --> ErrorException: Undefined array key "JK"
+[Method: GET, Route: detail-lab/23]
+in APPPATH\Views\main\v_detail_lab.php on line 52.
+ 1 APPPATH\Views\main\v_detail_lab.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "JK"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php', 52)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_lab', [], true)
+ 5 APPPATH\Controllers\Main.php(253): view('Main/v_detail_lab', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_lab('23')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-31 02:53:06 --> ErrorException: Undefined property: CodeIgniter\HTTP\IncomingRequest::$hematologi_1
+[Method: POST, Route: save-lab]
+in APPPATH\Controllers\Main.php on line 205.
+ 1 APPPATH\Controllers\Main.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$hematologi_1', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 205)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-31 02:58:10 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: detail-lab/11]
+in APPPATH\Views\main\v_detail_lab.php on line 39.
+ 1 APPPATH\Views\main\v_detail_lab.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php', 39)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_lab.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_lab', [], true)
+ 5 APPPATH\Controllers\Main.php(257): view('Main/v_detail_lab', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_lab('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-31 04:15:43 --> ErrorException: Undefined variable $data_id
+[Method: POST, Route: save-lab]
+in APPPATH\Controllers\Main.php on line 250.
+ 1 APPPATH\Controllers\Main.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_id', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-31 07:20:29 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: detail-mcu/23]
+in APPPATH\Views\main\v_detail_mcu.php on line 32.
+ 1 APPPATH\Views\main\v_detail_mcu.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(158): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('23')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,28 @@
+CRITICAL - 2025-01-08 02:48:38 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: detail-mcu/91]
+in APPPATH\Views\main\v_detail_mcu.php on line 32.
+ 1 APPPATH\Views\main\v_detail_mcu.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(160): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('91')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-08 02:49:04 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: detail-mcu/91]
+in APPPATH\Views\main\v_detail_mcu.php on line 32.
+ 1 APPPATH\Views\main\v_detail_mcu.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(160): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('91')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,96 @@
+ERROR - 2024-12-29 23:35:55 --> mysqli_sql_exception: Column 'dr' cannot be null in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\mcu-avisena\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\mcu-avisena\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(67): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#11 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-29 23:35:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'dr' cannot be null
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :dr:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-29 23:35:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'dr' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'\', NULL, \'\', \'\', \'\', NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'\', NULL, \'\', \'\', \'\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :dr:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-29 23:35:55 --> [Caused by] mysqli_sql_exception: Column 'dr' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'\', NULL, \'\', \'\', \'\', NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'\', NULL, \'\', \'\', \'\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'\', NULL, \'\', \'\', \'\', NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `dr`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :dr:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-29 23:37:32 --> ErrorException: Undefined array key 9
+[Method: POST, Route: save-lab]
+in APPPATH\Controllers\Main.php on line 174.
+ 1 APPPATH\Controllers\Main.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 174)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-29 23:40:05 --> ErrorException: Undefined array key 9
+[Method: POST, Route: save-lab]
+in APPPATH\Controllers\Main.php on line 174.
+ 1 APPPATH\Controllers\Main.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 174)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-29 23:41:22 --> ErrorException: Undefined array key 9
+[Method: POST, Route: save-lab]
+in APPPATH\Controllers\Main.php on line 178.
+ 1 APPPATH\Controllers\Main.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 178)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,821 @@
+ERROR - 2024-12-20 00:36:20 --> mysqli_sql_exception: Duplicate entry '5' for key 'tb_mata.id_user' in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\mcu-avisena\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\mcu-avisena\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(67): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#11 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-20 00:36:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'tb_mata.id_user'
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES (:id_user:, :visus_od_1:, :visus_os_1:, :visus_od_2:, :visus_os_2:, :buta_warna:, :sklera:, :konjungtiva:, :kesimpulan_mata:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 00:36:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'tb_mata.id_user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES ((\'5\'), \'0\', \'1\', \'9\', \'1\', \'3\', \'2\', \'1\', \'coba kepala\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES ((\'5\'), \'0\', \'1\', \'9\', \'1\', \'3\', \'2\', \'1\', \'coba kepala\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES (:id_user:, :visus_od_1:, :visus_os_1:, :visus_od_2:, :visus_os_2:, :buta_warna:, :sklera:, :konjungtiva:, :kesimpulan_mata:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 00:36:20 --> [Caused by] mysqli_sql_exception: Duplicate entry '5' for key 'tb_mata.id_user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES ((\'5\'), \'0\', \'1\', \'9\', \'1\', \'3\', \'2\', \'1\', \'coba kepala\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES ((\'5\'), \'0\', \'1\', \'9\', \'1\', \'3\', \'2\', \'1\', \'coba kepala\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES ((\'5\'), \'0\', \'1\', \'9\', \'1\', \'3\', \'2\', \'1\', \'coba kepala\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_mata` (`id_user`, `visus_od_1`, `visus_os_1`, `visus_od_2`, `visus_os_2`, `buta_warna`, `sklera`, `konjungtiva`, `kesimpulan_mata`) VALUES (:id_user:, :visus_od_1:, :visus_os_1:, :visus_od_2:, :visus_os_2:, :buta_warna:, :sklera:, :konjungtiva:, :kesimpulan_mata:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Main.php(67): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 00:41:27 --> BadMethodCallException: Call to undefined method App\Models\Users::last
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Models\Users.php(46): CodeIgniter\Model->__call('last', [])
+ 2 APPPATH\Controllers\Main.php(56): App\Models\Users->getUserId('Aries Widyantoro')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 00:43:31 --> mysqli_sql_exception: Column 'kiri_atas' cannot be null in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\mcu-avisena\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\mcu-avisena\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(118): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#11 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-20 00:43:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kiri_atas' cannot be null
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES (:id_user:, :kiri_atas:, :kanan_atas:, :kiri_bawah:, :kanan_bawah:, :pergerakan:, :kesimpulan_ekstrimitas:, :kesimpulan_keseluruhan:, :saran:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Main.php(118): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 00:43:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kiri_atas' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES ((\'9\'), NULL, NULL, NULL, NULL, \'Bebas\', NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES ((\'9\'), NULL, NULL, NULL, NULL, \'Bebas\', NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES (:id_user:, :kiri_atas:, :kanan_atas:, :kiri_bawah:, :kanan_bawah:, :pergerakan:, :kesimpulan_ekstrimitas:, :kesimpulan_keseluruhan:, :saran:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Main.php(118): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 00:43:31 --> [Caused by] mysqli_sql_exception: Column 'kiri_atas' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES ((\'9\'), NULL, NULL, NULL, NULL, \'Bebas\', NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES ((\'9\'), NULL, NULL, NULL, NULL, \'Bebas\', NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES ((\'9\'), NULL, NULL, NULL, NULL, \'Bebas\', NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_ekstrimitas` (`id_user`, `kiri_atas`, `kanan_atas`, `kiri_bawah`, `kanan_bawah`, `pergerakan`, `kesimpulan_ekstrimitas`, `kesimpulan_keseluruhan`, `saran`) VALUES (:id_user:, :kiri_atas:, :kanan_atas:, :kiri_bawah:, :kanan_bawah:, :pergerakan:, :kesimpulan_ekstrimitas:, :kesimpulan_keseluruhan:, :saran:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Main.php(118): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 01:01:20 --> mysqli_sql_exception: Unknown table 'tb_user' in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `tb_user...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_user...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_user...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_user...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\mcu-avisena\app\Models\Users.php(60): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+#8 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 01:01:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'tb_user'
+[Method: GET, Route: detail-mcu/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = :tb_user.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:01:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'tb_user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = \'10\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = :tb_user.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:01:20 --> [Caused by] mysqli_sql_exception: Unknown table 'tb_user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = \'10\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = \'10\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_user`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_users`
+JOIN `tb_mata` ON `tb_user`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_user`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_user`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_user`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_user`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_user`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_user`.`id` = :tb_user.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 01:01:47 --> mysqli_sql_exception: Table 'mcu-avisena.tb_userss' doesn't exist in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `tb_user...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_user...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_user...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_user...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\mcu-avisena\app\Models\Users.php(60): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+#8 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 01:01:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mcu-avisena.tb_userss' doesn't exist
+[Method: GET, Route: detail-mcu/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = :tb_users.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:01:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mcu-avisena.tb_userss' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = \'10\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = :tb_users.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:01:47 --> [Caused by] mysqli_sql_exception: Table 'mcu-avisena.tb_userss' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = \'10\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = \'10\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `tb_users`.*, `tb_mata`.*, `tb_tht`.*, `tb_mulut`.*, `tb_dada`.*, `tb_perut`.*, `tb_ekstrimitas`.*
+FROM `tb_userss`
+JOIN `tb_mata` ON `tb_users`.`id` = `tb_mata`.`id_user`
+JOIN `tb_tht` ON `tb_users`.`id` = `tb_tht`.`id_user`
+JOIN `tb_mulut` ON `tb_users`.`id` = `tb_mulut`.`id_user`
+JOIN `tb_dada` ON `tb_users`.`id` = `tb_dada`.`id_user`
+JOIN `tb_perut` ON `tb_users`.`id` = `tb_perut`.`id_user`
+JOIN `tb_ekstrimitas` ON `tb_users`.`id` = `tb_ekstrimitas`.`id_user`
+WHERE `tb_users`.`id` = :tb_users.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Users.php(60): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Main.php(124): App\Models\Users->getUserById('10')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:09:06 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 99.
+ 1 APPPATH\Views\main\v_detail_mcu.php(99): date('d-m-y', 'Aries Widyantoro')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:09:53 --> TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 99.
+ 1 APPPATH\Views\main\v_detail_mcu.php(99): date_format(false, 'd-m-y')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:11:10 --> ParseError: syntax error, unexpected token "echo"
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 101.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 3 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:11:16 --> TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 101.
+ 1 APPPATH\Views\main\v_detail_mcu.php(101): date_format(false, 'd-m-y')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:12:05 --> TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 101.
+ 1 APPPATH\Views\main\v_detail_mcu.php(101): date_format(false, 'Y-m-d H:i:s')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:13:46 --> Exception: Failed to parse time string (Aries Widyantoro) at position 0 (A): The timezone could not be found in the database
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 100.
+ 1 APPPATH\Views\main\v_detail_mcu.php(100): DateTime->__construct('Aries Widyantoro')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:14:03 --> ErrorException: Undefined array key "tgl"
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 100.
+ 1 APPPATH\Views\main\v_detail_mcu.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:14:46 --> ErrorException: Undefined array key "bb"
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 111.
+ 1 APPPATH\Views\main\v_detail_mcu.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bb"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 111)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 01:15:20 --> ErrorException: Undefined array key "tinggi_badan cm"
+[Method: GET, Route: detail-mcu/10]
+in APPPATH\Views\main\v_detail_mcu.php on line 119.
+ 1 APPPATH\Views\main\v_detail_mcu.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tinggi_badan cm"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 119)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('10')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 02:51:28 --> mysqli_sql_exception: Column 'bagian' cannot be null in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\mcu-avisena\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\mcu-avisena\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#11 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-20 02:51:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'bagian' cannot be null
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:51:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'bagian' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'76\', \'178\', \'135/187\', \'82\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'76\', \'178\', \'135/187\', \'82\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:51:28 --> [Caused by] mysqli_sql_exception: Column 'bagian' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'76\', \'178\', \'135/187\', \'82\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'76\', \'178\', \'135/187\', \'82\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'76\', \'178\', \'135/187\', \'82\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 02:52:05 --> mysqli_sql_exception: Column 'bagian' cannot be null in C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\laragon\www\mcu-avisena\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\laragon\www\mcu-avisena\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\laragon\www\mcu-avisena\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\laragon\www\mcu-avisena\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\mcu-avisena\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\mcu-avisena\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\mcu-avisena\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\mcu-avisena\app\Controllers\Main.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+#10 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#11 C:\laragon\www\mcu-avisena\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\mcu-avisena\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\mcu-avisena\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\mcu-avisena\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-20 02:52:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'bagian' cannot be null
+[Method: POST, Route: save-mcu]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:52:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'bagian' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'2024-12-13\', \'76\', \'178\', \'135/187\', \'82\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'2024-12-13\', \'76\', \'178\', \'135/187\', \'82\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:52:05 --> [Caused by] mysqli_sql_exception: Column 'bagian' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'2024-12-13\', \'76\', \'178\', \'135/187\', \'82\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'2024-12-13\', \'76\', \'178\', \'135/187\', \'82\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (\'Aries Widyantoro\', \'Personalia\', NULL, \'2024-12-13\', \'76\', \'178\', \'135/187\', \'82\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_users` (`nama`, `unit`, `bagian`, `tgl`, `berat_badan`, `tinggi_badan`, `tekanan_darah`, `nadi`) VALUES (:nama:, :unit:, :bagian:, :tgl:, :berat_badan:, :tinggi_badan:, :tekanan_darah:, :nadi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Main.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:54:04 --> ErrorException: Undefined array key "visus_id_1"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 161.
+ 1 APPPATH\Views\main\v_detail_mcu.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "visus_id_1"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 161)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 02:56:05 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 174.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 3 APPPATH\Controllers\Main.php(130): view('Main/v_detail_mcu', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 03:16:16 --> ErrorException: Undefined array key "hipermesis"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 304.
+ 1 APPPATH\Views\main\v_detail_mcu.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "hipermesis"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 304)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 03:21:59 --> ErrorException: Undefined array key "mcu_dada"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 510.
+ 1 APPPATH\Views\main\v_detail_mcu.php(510): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mcu_dada"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 510)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 03:29:10 --> ErrorException: Undefined array key "kesimpulan_saran"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 665.
+ 1 APPPATH\Views\main\v_detail_mcu.php(665): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kesimpulan_saran"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 665)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 03:45:38 --> ErrorException: Undefined array key 0
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 174.
+ 1 APPPATH\Views\main\v_detail_mcu.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 174)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 03:47:09 --> ErrorException: Undefined array key "visus_oS_1"
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 154.
+ 1 APPPATH\Views\main\v_detail_mcu.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "visus_oS_1"', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 154)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 04:34:53 --> ErrorException: Undefined variable $label
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 178.
+ 1 APPPATH\Views\main\v_detail_mcu.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $label', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 178)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 04:35:21 --> ErrorException: Undefined variable $label
+[Method: GET, Route: detail-mcu/11]
+in APPPATH\Views\main\v_detail_mcu.php on line 178.
+ 1 APPPATH\Views\main\v_detail_mcu.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $label', 'C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php', 178)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\mcu-avisena\\app\\Views\\main\\v_detail_mcu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Main/v_detail_mcu', [], true)
+ 5 APPPATH\Controllers\Main.php(143): view('Main/v_detail_mcu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->detail_mcu('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 07:47:04 --> ErrorException: Array to string conversion
+[Method: POST, Route: save-mcu]
+in APPPATH\Controllers\Main.php on line 134.
+ 1 APPPATH\Controllers\Main.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 07:55:45 --> ErrorException: Array to string conversion
+[Method: POST, Route: save-mcu]
+in APPPATH\Controllers\Main.php on line 135.
+ 1 APPPATH\Controllers\Main.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 08:04:51 --> ErrorException: Array to string conversion
+[Method: POST, Route: save-mcu]
+in APPPATH\Controllers\Main.php on line 135.
+ 1 APPPATH\Controllers\Main.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_mcu()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

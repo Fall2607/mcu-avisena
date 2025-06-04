@@ -1,0 +1,12 @@
+.sub-utama {
+    padding-left: 20px;
+}
+
+
+.bgnya {
+    background: url('') no-repeat center;
+    background-size: auto 500px;
+    /* Mengatur tinggi gambar menjadi 300px, lebar otomatis */
+    background-position: center;
+    /* Memastikan gambar berada di tengah */
+}
