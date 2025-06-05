@@ -18,18 +18,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <img width="90px" class="float-end"
-                                        src="<?= base_url('assets/img/logo-avisena.png') ?>" alt="">
+                                    <img width="90px" class="float-end" src="<?= base_url('assets/img/logo-avisena.png') ?>" alt="">
                                 </div>
                                 <div class="col-sm-6 pt-3 text-center">
-                                    <h4 class="text-bold" style="line-height: 1; font-weight: 800;">LABORATORIUM<br>RSU
-                                        AVISENA</h4>
-                                    <p style="font-size: 12px; line-height: 1.4;">Jl. Melong No. 170 Cimahi<br>Telp 022
-                                        - 6000830 </p>
+                                    <h4 class="text-bold" style="line-height: 1; font-weight: 800;">LABORATORIUM<br>RSU AVISENA</h4>
+                                    <p style="font-size: 12px; line-height: 1.4;">Jl. Melong No. 170 Cimahi<br>Telp 022 - 6000830 </p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <img width="68px" class="float-start"
-                                        src="<?= base_url('assets/img/logo-lars.png') ?>" alt="">
+                                    <img width="68px" class="float-start" src="<?= base_url('assets/img/logo-lars.png') ?>" alt="">
                                 </div>
                             </div>
                             <hr style="border: black 1px solid;">
@@ -41,7 +37,6 @@
                                                 <label>Nama</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <input class="form-control" name="u_name" placeholder="Ketikan Nama Lengkap" type="text"> -->
                                                 <?= '<label>: ' . $lab['nama'] . '</label>'; ?>
                                             </div>
                                         </div>
@@ -50,11 +45,6 @@
                                                 <label>Jenis Kelamin</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <select name="jk" class="form-control">
-                                                        <option hidden>Pilih Jenis Kelamin</option>
-                                                        <option value="Laki - Laki">Laki-Laki</option>
-                                                        <option value="Perempuan">Perempuan</option>
-                                                    </select> -->
                                                 <?= '<label>: ' . $lab['jenis_kelamin'] . '</label>'; ?>
                                             </div>
                                         </div>
@@ -63,10 +53,8 @@
                                                 <label>Tanggal Periksa</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <input class="form-control" name="Bagian" placeholder="Ketikan Unit" type="Number"> -->
-                                                <!-- <input name="tgl" class="form-control" type="date"> -->
                                                 <?php
-                                                $date = new DateTime($lab['tgl_mcu']);
+                                                $date = new DateTime($lab['tgl']);
                                                 echo '<label>: ' . date_format($date, 'd-m-Y') . '</label>'; ?>
                                             </div>
                                         </div>
@@ -74,25 +62,18 @@
                                     <div class="col-md-6">
                                         <div class="row align-items-center">
                                             <div class="col-6">
-                                                <label>Usia</label>
+                                                <label>No Order</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <input class="form-control" name="unit" placeholder="Ketikan Unit" type="text"> -->
-                                                <?php
-                                                $birthDate = new DateTime($lab['tgl']);
-                                                $today = new DateTime();
-                                                $age = $today->diff($birthDate)->y;
-                                                echo '<label>: ' . $age . ' tahun</label>';
-                                                ?>
+                                                <?= '<label>: 0' . $lab['idlab'] . '</label>'; ?>
                                             </div>
                                         </div>
                                         <div class="row align-items-center">
                                             <div class="col-6">
-                                                <label>Perusahaan</label>
+                                                <label>Unit</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <input class="form-control" name="unit" placeholder="Ketikan Unit" type="text"> -->
-                                                <?= '<label>: ' . $lab['nama_perusahaan'] . '</label>'; ?>
+                                                <?= '<label>: ' . $lab['unit'] . '</label>'; ?>
                                             </div>
                                         </div>
                                         <div class="row align-items-center">
@@ -100,7 +81,6 @@
                                                 <label>Bagian</label>
                                             </div>
                                             <div class="col-6">
-                                                <!-- <input class="form-control" name="bagian" placeholder="Ketikan Bagian" type="text"> -->
                                                 <?= '<label>: ' . $lab['bagian'] . '</label>'; ?>
                                             </div>
                                         </div>
@@ -112,8 +92,7 @@
                                         <table class='table' id="hematologiTable" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center" scope="col" style="width: 10%;"><b>No</b>
-                                                    </th>
+                                                    <th class="text-center" scope="col" style="width: 10%;"><b>No</b></th>
                                                     <th scope="col"><b>Specimen</b></th>
                                                     <th scope="col"><b>Hasil</b></th>
                                                     <th scope="col"><b>Kesimpulan</b></th>
@@ -141,6 +120,42 @@
                                                 ?>
                                                 <tr>
                                                     <th class="text-center" scope="row"><b>2</b></th>
+                                                    <td colspan="3"><b>Hitung Jenis</b></td>
+                                                </tr>
+                                                <?php
+                                                $hitungJenisData = json_decode($lab['hitung_jenis'], true);
+
+                                                // Generate table rows based on JSON data
+                                                foreach ($hitungJenisData as $key => $item_jenis) {
+                                                    echo '<tr>';
+                                                    echo '<th class="text-center" scope="row">-</th>';
+                                                    echo '<td style="padding-left:50px">' . $item_jenis['name'] . '</td>';
+                                                    echo '<td>' . $item_jenis['value'] . ' ' . $item_jenis['satuan'] . '</td>';
+                                                    echo '<td>' . $item_jenis['kesimpulan'] . '</td>';
+                                                    echo '<td>' . $item_jenis['nilai_normal'] . '</td>';
+                                                    echo '</tr>';
+                                                }
+                                                ?>
+                                                <tr class="break-before">
+                                                    <th class="text-center" scope="row"><b>3</b></th>
+                                                    <td colspan="3"><b>Kimia Darah</b></td>
+                                                </tr>
+                                                <?php
+                                                $hitungKimiaDarah = json_decode($lab['kimia_darah'], true);
+
+                                                // Generate table rows based on JSON data
+                                                foreach ($hitungKimiaDarah as $key => $item_kimia) {
+                                                    echo '<tr>';
+                                                    echo '<th class="text-center" scope="row">-</th>';
+                                                    echo '<td style="padding-left:50px">' . $item_kimia['name'] . '</td>';
+                                                    echo '<td>' . $item_kimia['value'] . ' ' . $item_kimia['satuan'] . '</td>';
+                                                    echo '<td>' . $item_kimia['kesimpulan'] . '</td>';
+                                                    echo '<td>' . $item_kimia['nilai_normal'] . '</td>';
+                                                    echo '</tr>';
+                                                }
+                                                ?>
+                                                <tr>
+                                                    <th class="text-center" scope="row"><b>4</b></th>
                                                     <td colspan="3"><b>Urinalisa</b></td>
                                                 </tr>
                                                 <tr>
@@ -211,11 +226,11 @@
                                             <!-- Kolom Analis -->
                                             <div class="col-sm-6 text-center d-flex flex-column align-items-center">
                                                 <h6>Analis</h6>
-                                                <img src="<?= base_url('assets/img/bar/fajriah.png') ?>" height="100px">
-                                                <h6 class="mt-3">Fajriah Nurjayanti, Amd.A.K.</h6>
+                                                <img src="<?= base_url('assets/img/bar/analisRiska.png') ?>" height="100px">
+                                                <h6 class="mt-3">Riska Wilianti, A.Md.A.K.</h6>
                                                 <h6 class="pb-0 mt-1">
                                                     <?php
-                                                    $date = new DateTime($lab['tgl_mcu']);
+                                                    $date = new DateTime($lab['tgl']);
                                                     echo date_format($date, 'd-m-Y');
                                                     ?>
                                                 </h6>
@@ -253,7 +268,7 @@
 <!-- Tambahkan JavaScript untuk Print dan Export PDF -->
 <script>
     const labName = "<?= $lab['nama']; ?>";
-    document.getElementById('exportPDF').addEventListener('click', async function () {
+    document.getElementById('exportPDF').addEventListener('click', async function() {
         const element = document.getElementById('contentToPrint');
         if (typeof html2pdf !== 'undefined') {
             const options = {

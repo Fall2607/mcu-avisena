@@ -12,7 +12,7 @@ use App\Models\Perut;
 use App\Models\THT;
 use App\Models\Users;
 
-class Main extends BaseController
+class Dummy extends BaseController
 {
     protected $user, $mata, $tht, $dada, $mulut, $perut, $ekstrimitas, $db, $check, $lab;
     public function __construct()
@@ -478,80 +478,73 @@ class Main extends BaseController
         $jk = $this->user->getJkById($id_user);
 
         $data_hematologi = [];
-        // $data_hitungjenis = [];
-        // $data_kimiadarah = [];
+        $data_hitungjenis = [];
+        $data_kimiadarah = [];
         $data_makroskopik = [];
         $data_mikroskopik = [];
         $data_sedimen = [];
-        $item_hematologi = ['Hemoglobin', 'Leukosit', 'Hematokrit', 'Trombosit'];
-        $satuan_hematologi = ['gr', 'rb mm3', '%', 'x 1000 ul'];
-        // $item_hitungjenis = ['Basofil', 'Eosinofil', 'Batang', 'Segmen', 'Limsofit', 'Monosit'];
-        // $satuan_hitungjenis = ['%', '%', '%', '%', '%', '%'];
-        // $item_kimiadarah = ['SGOT', 'SGPT', 'Creatinin'];
-        // $satuan_kimiadarah = ['U/L', 'U/L', 'mg/dl'];
+        $item_hematologi = ['Hemoglobin', 'Leukosit', 'Eritrosit', 'Hematokrit', 'Trombosit', 'MCV', 'MCH', 'MCHC', 'LED'];
+        $satuan_hematologi = ['gr', 'rb mm3', 'jt mm3', '%', 'x 1000 ul', '', '', '', ''];
+        $item_hitungjenis = ['Basofil', 'Eosinofil', 'Batang', 'Segmen', 'Limsofit', 'Monosit'];
+        $satuan_hitungjenis = ['%', '%', '%', '%', '%', '%'];
+        $item_kimiadarah = ['SGOT', 'SGPT', 'Creatinin'];
+        $satuan_kimiadarah = ['U/L', 'U/L', 'mg/dl'];
         $item_makroskopik = ['Warna', 'Kekeruhan', 'pH', 'Berat_Jenis'];
         $satuan_makroskopik = ['', '', '', ''];
         $item_mikroskopik = ['Leukosit', 'Nitrit', 'Urobilinogen', 'Protein', 'Blood', 'Keton', 'Bilirubin', 'Glukosa'];
         $satuan_mikroskopik = ['', '', '', '', '', '', '', ''];
-        $item_sedimen = ['Eritrosit', 'Leukosit', 'Epitel', 'Bakteri', 'Kristal', 'Silinder'];
-        $satuan_sedimen = ['', '', '', '', '', ''];
+        $item_sedimen = ['Eritrosit', 'Leukosit', 'Epitel', 'Bakteri', 'Kristal'];
+        $satuan_sedimen = ['', '', '', '', ''];
 
         $range_1 = [
             1 => ['Pria' => [12.5, 18], 'Wanita' => [11.5, 16]],
             2 => [4, 10],
-            3 => ['Pria' => [38, 51], 'Wanita' => [36, 48]],
-            4 => [150, 400],
+            3 => [4, 6.5],
+            4 => ['Pria' => [38, 51], 'Wanita' => [36, 48]],
+            5 => [150, 400],
+            6 => [83.9, 99.1],
+            7 => [27.8, 33.8],
+            8 => [32, 36],
+            9 => ['Pria' => [13, 18], 'Wanita' => [10, 15]],
         ];
 
-        // $range_2 = [
-        //     1 => [0, 1],
-        //     2 => [0, 4],
-        //     3 => [2, 5],
-        //     4 => [36, 66],
-        //     5 => [22, 40],
-        //     6 => [4, 8],
-        // ];
+        $range_2 = [
+            1 => [0, 1],
+            2 => [0, 4],
+            3 => [2, 5],
+            4 => [36, 66],
+            5 => [22, 40],
+            6 => [4, 8],
+        ];
 
-        // $range_3 = [
-        //     1 => ['Pria' => [8, 37], 'Wanita' => [8, 31]],
-        //     2 => ['Pria' => [6, 40], 'Wanita' => [6, 31]],
-        //     3 => ['Pria' => [0.8, 1.5], 'Wanita' => [0.6, 1.2]],
-        // ];
+        $range_3 = [
+            1 => ['Pria' => [8, 37], 'Wanita' => [8, 31]],
+            2 => ['Pria' => [6, 40], 'Wanita' => [6, 31]],
+            3 => ['Pria' => [0.8, 1.5], 'Wanita' => [0.6, 1.2]],
+        ];
 
         $range_4 = [
-            1 => ['Kuning'],
-            2 => ['Jernih'],
-            3 => [4.7, 7.5],
+            1 => [],
+            2 => [],
+            3 => [7.35, 7.5],
             4 => [1.000, 1.030],
-        ];
-
-        $range_5 = [
-            1 => ['Negatif'],
-            2 => ['Negatif'],
-            3 => ['Normal'],
-            4 => ['Negatif'],
-            5 => ['Negatif'],
-            6 => ['Negatif'],
-            7 => ['Negatif'],
-            8 => ['Negatif'],
         ];
 
         $range_6 = [
             1 => [0, 1],
             2 => [0, 6],
             3 => [],
-            4 => ['Negatif'],
-            5 => ['Negatif'],
-            6 => ['Negatif'],
+            4 => [],
+            5 => [],
         ];
 
-        for ($a = 1; $a <= 4; $a++) {
+        for ($a = 1; $a <= 9; $a++) {
             $value = $this->request->getVar("hematologi_$a");
             $hasil = '';
             $nilai_normal = NULL;
 
             $compareValue = $value;
-            if ($a == 4 && preg_match('/\d+(\.\d+)?/', $value, $matches)) {
+            if ($a == 9 && preg_match('/\d+(\.\d+)?/', $value, $matches)) {
                 $compareValue = (float) $matches[0]; // Hanya gunakan angka pertama untuk perbandingan
             }
 
@@ -570,8 +563,6 @@ class Main extends BaseController
                         $hasil = 'Low';
                     } elseif ($compareValue > $limits[1]) {
                         $hasil = 'High';
-                    } else {
-                        $hasil = 'Normal';
                     }
                 }
             }
@@ -586,72 +577,72 @@ class Main extends BaseController
         }
 
 
-        // for ($b = 1; $b <= 6; $b++) {
-        //     $value = $this->request->getVar("hitungjenis_$b");
-        //     $hasil = '';
-        //     $nilai_normal = NULL;
+        for ($b = 1; $b <= 6; $b++) {
+            $value = $this->request->getVar("hitungjenis_$b");
+            $hasil = '';
+            $nilai_normal = NULL;
 
-        //     $compareValue = $value;
+            $compareValue = $value;
 
-        //     if (!empty($range_2[$b])) {
-        //         if (isset($range_2[$b]['Pria'], $range_2[$b]['Wanita'])) {
-        //             $gender = $jk['jenis_kelamin'] ?? 'Wanita';
-        //             $limits = $range_2[$b][$gender];
-        //         } else {
-        //             $limits = $range_2[$b];
-        //         }
+            if (!empty($range_2[$b])) {
+                if (isset($range_2[$b]['Pria'], $range_2[$b]['Wanita'])) {
+                    $gender = $jk['jenis_kelamin'] ?? 'Wanita';
+                    $limits = $range_2[$b][$gender];
+                } else {
+                    $limits = $range_2[$b];
+                }
 
-        //         if (is_array($limits) && count($limits) === 2) {
-        //             $nilai_normal = "{$limits[0]} - {$limits[1]}";
-        //             if ($compareValue < $limits[0]) {
-        //                 $hasil = 'Low';
-        //             } elseif ($compareValue > $limits[1]) {
-        //                 $hasil = 'High';
-        //             }
-        //         }
-        //     }
-        //     $data_hitungjenis["hitungjenis_$b"] = [
-        //         "name" => $item_hitungjenis[$b - 1],
-        //         "value" => $this->request->getVar("hitungjenis_$b"),
-        //         "satuan" => $satuan_hitungjenis[$b - 1],
-        //         "kesimpulan" => $hasil,
-        //         "nilai_normal" => $nilai_normal
-        //     ];
-        // }
+                if (is_array($limits) && count($limits) === 2) {
+                    $nilai_normal = "{$limits[0]} - {$limits[1]}";
+                    if ($compareValue < $limits[0]) {
+                        $hasil = 'Low';
+                    } elseif ($compareValue > $limits[1]) {
+                        $hasil = 'High';
+                    }
+                }
+            }
+            $data_hitungjenis["hitungjenis_$b"] = [
+                "name" => $item_hitungjenis[$b - 1],
+                "value" => $this->request->getVar("hitungjenis_$b"),
+                "satuan" => $satuan_hitungjenis[$b - 1],
+                "kesimpulan" => $hasil,
+                "nilai_normal" => $nilai_normal
+            ];
+        }
 
-        // for ($c = 1; $c <= 3; $c++) {
-        //     $value = $this->request->getVar("kimiadarah_$c");
-        //     $hasil = '';
-        //     $nilai_normal = NULL;
+        for ($c = 1; $c <= 3; $c++) {
+            $value = $this->request->getVar("kimiadarah_$c");
+            $hasil = '';
+            $nilai_normal = NULL;
 
-        //     $compareValue = $value;
+            $compareValue = $value;
 
-        //     if (!empty($range_3[$c])) {
-        //         if (isset($range_3[$c]['Pria'], $range_3[$c]['Wanita'])) {
-        //             $gender = $jk['jenis_kelamin'] ?? 'Wanita';
-        //             $limits = $range_3[$c][$gender];
-        //         } else {
-        //             $limits = $range_3[$c];
-        //         }
+            if (!empty($range_3[$c])) {
+                if (isset($range_3[$c]['Pria'], $range_3[$c]['Wanita'])) {
+                    $gender = $jk['jenis_kelamin'] ?? 'Wanita';
+                    $limits = $range_3[$c][$gender];
+                } else {
+                    $limits = $range_3[$c];
+                }
 
-        //         if (is_array($limits) && count($limits) === 2) {
-        //             $nilai_normal = "{$limits[0]} - {$limits[1]}";
-        //             if ($compareValue < $limits[0]) {
-        //                 $hasil = 'Low';
-        //             } elseif ($compareValue > $limits[1]) {
-        //                 $hasil = 'High';
-        //             }
-        //         }
-        //     }
+                if (is_array($limits) && count($limits) === 2) {
+                    $nilai_normal = "{$limits[0]} - {$limits[1]}";
+                    if ($compareValue < $limits[0]) {
+                        $hasil = 'Low';
+                    } elseif ($compareValue > $limits[1]) {
+                        $hasil = 'High';
+                    }
+                }
+            }
 
-        //     $data_kimiadarah["kimiadarah_$c"] = [
-        //         "name" => $item_kimiadarah[$c - 1],
-        //         "value" => $this->request->getVar("kimiadarah_$c"),
-        //         "satuan" => $satuan_kimiadarah[$c - 1],
-        //         "kesimpulan" => $hasil,
-        //         "nilai_normal" => $nilai_normal
-        //     ];
-        // }
+            $data_kimiadarah["kimiadarah_$c"] = [
+                "name" => $item_kimiadarah[$c - 1],
+                "value" => $this->request->getVar("kimiadarah_$c"),
+                "satuan" => $satuan_kimiadarah[$c - 1],
+                "kesimpulan" => $hasil,
+                "nilai_normal" => $nilai_normal
+            ];
+        }
 
         for ($d = 1; $d <= 4; $d++) {
             $value = $this->request->getVar("dd_$d");
@@ -668,26 +659,12 @@ class Main extends BaseController
                     $limits = $range_4[$d];
                 }
 
-                if (is_array($limits) && count($limits) === 2 && is_numeric($limits[0]) && is_numeric($limits[1])) {
-                    // Khusus untuk Berat_Jenis (index ke-4), tampilkan 3 digit di belakang koma
-                    if ($d == 4) {
-                        $nilai_normal = number_format($limits[0], 3, '.', '') . ' - ' . number_format($limits[1], 3, '.', '');
-                    } else {
-                        $nilai_normal = "{$limits[0]} - {$limits[1]}";
-                    }
+                if (is_array($limits) && count($limits) === 2) {
+                    $nilai_normal = "{$limits[0]} - {$limits[1]}";
                     if ($compareValue < $limits[0]) {
                         $hasil = 'Low';
                     } elseif ($compareValue > $limits[1]) {
                         $hasil = 'High';
-                    } else {
-                        $hasil = 'Normal';
-                    }
-                } elseif (is_array($limits) && count($limits) === 1 && is_string($limits[0])) {
-                    $nilai_normal = $limits[0];
-                    if (strtolower(trim($compareValue)) === strtolower(trim($limits[0]))) {
-                        $hasil = 'Normal';
-                    } else {
-                        $hasil = 'Abnormal';
                     }
                 }
             }
@@ -702,32 +679,16 @@ class Main extends BaseController
         }
 
         for ($e = 1; $e <= 8; $e++) {
-            $value = $this->request->getVar("cc_$e");
-            $hasil = '';
-            $nilai_normal = null;
-
-            if (!empty($range_5[$e])) {
-                $limits = $range_5[$e];
-                if (is_array($limits) && count($limits) === 1 && is_string($limits[0])) {
-                    $nilai_normal = $limits[0];
-                    if (strtolower(trim($value)) === strtolower(trim($limits[0]))) {
-                        $hasil = 'Normal';
-                    } else {
-                        $hasil = 'Abnormal';
-                    }
-                }
-            }
-
             $data_mikroskopik["mikroskopik_$e"] = [
                 "name" => $item_mikroskopik[$e - 1],
-                "value" => $value,
+                "value" => $this->request->getVar("cc_$e"),
                 "satuan" => $satuan_mikroskopik[$e - 1],
-                "kesimpulan" => $hasil,
-                "nilai_normal" => $nilai_normal
+                "kesimpulan" => '',
+                "nilai_normal" => NULL
             ];
         }
 
-        for ($f = 1; $f <= 6; $f++) {
+        for ($f = 1; $f <= 5; $f++) {
             $value = $this->request->getVar("sedimen_$f");
             $hasil = '';
             $nilai_normal = NULL;
@@ -751,15 +712,6 @@ class Main extends BaseController
                         $hasil = 'Low';
                     } elseif ($compareValue > $limits[1]) {
                         $hasil = 'High';
-                    } else {
-                        $hasil = 'Normal';
-                    }
-                } elseif (is_array($limits) && count($limits) === 1 && is_string($limits[0])) {
-                    $nilai_normal = $limits[0];
-                    if (strtolower(trim($compareValue)) === strtolower(trim($limits[0]))) {
-                        $hasil = 'Normal';
-                    } else {
-                        $hasil = 'Abnormal';
                     }
                 }
             }
@@ -774,20 +726,20 @@ class Main extends BaseController
         }
 
         $hematologi = json_encode($data_hematologi, JSON_PRETTY_PRINT);
-        // $hitung_jenis = json_encode($data_hitungjenis, JSON_PRETTY_PRINT);
-        // $kimia_darah = json_encode($data_kimiadarah, JSON_PRETTY_PRINT);
+        $hitung_jenis = json_encode($data_hitungjenis, JSON_PRETTY_PRINT);
+        $kimia_darah = json_encode($data_kimiadarah, JSON_PRETTY_PRINT);
         $makroskopik = json_encode($data_makroskopik, JSON_PRETTY_PRINT);
         $mikroskopik = json_encode($data_mikroskopik, JSON_PRETTY_PRINT);
         $sedimen_urine = json_encode($data_sedimen, JSON_PRETTY_PRINT);
 
-        // dd($hematologi);
+        // dd($sedimen_urine);
 
 
         $this->lab->save([
             'id_user' => $id_user,
             'hematologi' => $hematologi,
-            // 'hitung_jenis' => $hitung_jenis,
-            // 'kimia_darah' => $kimia_darah,
+            'hitung_jenis' => $hitung_jenis,
+            'kimia_darah' => $kimia_darah,
             'makroskopik' => $makroskopik,
             'mikroskopik' => $mikroskopik,
             'sedimen_urine' => $sedimen_urine,
