@@ -494,3 +494,103 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
 13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 11:45:26 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 11:45:33 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 11:46:07 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 11:46:16 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 14:10:24 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 14:10:37 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 14:10:41 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 23:35:24 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 23:35:33 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-05 23:35:37 --> ErrorException: Undefined array key "Pria "
+[Method: POST, Route: save-half-lab]
+in APPPATH\Controllers\Main.php on line 561.
+ 1 APPPATH\Controllers\Main.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Pria "', 'C:\\laragon\\www\\mcu-avisena\\app\\Controllers\\Main.php', 561)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Main->save_half_lab()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

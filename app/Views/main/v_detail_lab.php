@@ -12,30 +12,32 @@
                         <label>FORM LABORATORIUM RSU AVISENA</label>
                         <div>
                             <button id="exportPDF" class="btn btn-danger">Export PDF</button>
+                            <button id="printPage" class="btn btn-primary ms-2">Print</button>
                         </div>
                     </div>
-                    <div class="card-body px-0 pt-3 pb-2" id="contentToPrint">
-                        <div class="container">
+                    <div class="card-body px-0" id="contentToPrint">
+                        <div class="container-fluid">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <img width="90px" class="float-end"
+                                    <img width="70px" class="float-end"
                                         src="<?= base_url('assets/img/logo-avisena.png') ?>" alt="">
                                 </div>
                                 <div class="col-sm-6 pt-3 text-center">
-                                    <h4 class="text-bold" style="line-height: 1; font-weight: 800;">LABORATORIUM<br>RSU
-                                        AVISENA</h4>
-                                    <p style="font-size: 12px; line-height: 1.4;">Jl. Melong No. 170 Cimahi<br>Telp 022
-                                        - 6000830 </p>
+                                    <h4 class="text-bold" style="line-height: 1; font-weight: 800;">
+                                        LABORATORIUM RSU AVISENA
+                                    </h4>
+                                    <p style="font-size: 12px; line-height: 1.4;">
+                                        Jl. Melong No. 170 Cimahi Telp 022-6000830 </p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <img width="68px" class="float-start"
+                                    <img width="58px" class="float-start"
                                         src="<?= base_url('assets/img/logo-lars.png') ?>" alt="">
                                 </div>
                             </div>
                             <hr style="border: black 1px solid;">
                             <div class="bgnya">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                         <div class="row align-items-center">
                                             <div class="col-6">
                                                 <label>Nama</label>
@@ -71,7 +73,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                         <div class="row align-items-center">
                                             <div class="col-6">
                                                 <label>Usia</label>
@@ -109,111 +111,131 @@
                                 <hr style="border: black 1px solid;">
                                 <div class="pemeriksaan-lab">
                                     <div class="table-container">
-                                        <table class='table' id="hematologiTable" class="table">
+                                        <table class='table mb-0' id="hematologiTable"
+                                            style="font-size:12px; border-collapse:collapse; border: none;">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center" scope="col" style="width: 10%;"><b>No</b>
+                                                    <th class="text-center" scope="col"
+                                                        style="width: 10%; padding:4px; border-bottom: 2px solid #dee2e6;">
+                                                        <b>No</b>
                                                     </th>
-                                                    <th scope="col"><b>Specimen</b></th>
-                                                    <th scope="col"><b>Hasil</b></th>
-                                                    <th scope="col"><b>Kesimpulan</b></th>
-                                                    <th scope="col"><b>Nilai Normal</b></th>
+                                                    <th scope="col"
+                                                        style="padding:4px; border-bottom: 2px solid #dee2e6;">
+                                                        <b>Specimen</b>
+                                                    </th>
+                                                    <th scope="col"
+                                                        style="padding:4px; border-bottom: 2px solid #dee2e6;">
+                                                        <b>Hasil</b>
+                                                    </th>
+                                                    <th scope="col"
+                                                        style="padding:4px; border-bottom: 2px solid #dee2e6;">
+                                                        <b>Kesimpulan</b>
+                                                    </th>
+                                                    <th scope="col"
+                                                        style="padding:4px; border-bottom: 2px solid #dee2e6;"><b>Nilai
+                                                            Normal</b></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th class="text-center" scope="row"><b>1</b></th>
-                                                    <td colspan="3"><b>Hematologi</b></td>
+                                                    <th class="text-center" scope="row"
+                                                        style="padding:4px; border:none;"><b>1</b>
+                                                    </th>
+                                                    <td colspan="4" style="padding:4px; border:none;"><b>Hematologi</b>
+                                                    </td>
                                                 </tr>
                                                 <?php
                                                 $hematologiData = json_decode($lab['hematologi'], true);
-
-                                                // Generate table rows based on JSON data
                                                 foreach ($hematologiData as $key => $item_hema) {
                                                     echo '<tr>';
-                                                    echo '<th class="text-center" scope="row">-</th>';
-                                                    echo '<td style="padding-left:50px">' . $item_hema['name'] . '</td>';
-                                                    echo '<td>' . $item_hema['value'] . ' ' . $item_hema['satuan'] . '</td>';
-                                                    echo '<td>' . $item_hema['kesimpulan'] . '</td>';
-                                                    echo '<td>' . $item_hema['nilai_normal'] . '</td>';
+                                                    echo '<th class="text-center" scope="row" style="padding:4px; border:none;">-</th>';
+                                                    echo '<td style="padding-left:30px; padding:4px; border:none;">' . $item_hema['name'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_hema['value'] . ' ' . $item_hema['satuan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_hema['kesimpulan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_hema['nilai_normal'] . '</td>';
                                                     echo '</tr>';
                                                 }
                                                 ?>
                                                 <tr>
-                                                    <th class="text-center" scope="row"><b>2</b></th>
-                                                    <td colspan="3"><b>Urinalisa</b></td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center" scope="row"><b>A</b></th>
-                                                    <td colspan="3"><b>Makroskopik</b></td>
+                                                    <th class="text-center" scope="row"
+                                                        style="padding:4px; border:none;"><b>2</b>
+                                                    </th>
+                                                    <td colspan="4" style="padding:4px; border:none;"><b>Urinalisa</b>
+                                                    </td>
                                                 </tr>
                                                 <?php
                                                 $hitungMakroskopik = json_decode($lab['makroskopik'], true);
-
-                                                // Generate table rows based on JSON data
                                                 foreach ($hitungMakroskopik as $key => $item_makro) {
                                                     echo '<tr>';
-                                                    echo '<th class="text-center" scope="row">-</th>';
-                                                    echo '<td style="padding-left:50px">' . $item_makro['name'] . '</td>';
-                                                    echo '<td>' . $item_makro['value'] . ' ' . $item_makro['satuan'] . '</td>';
-                                                    echo '<td>' . $item_makro['kesimpulan'] . '</td>';
-                                                    echo '<td>' . $item_makro['nilai_normal'] . '</td>';
+                                                    echo '<th class="text-center" scope="row" style="padding:4px; border:none;">-</th>';
+                                                    echo '<td style="padding-left:30px; padding:4px; border:none;">' . $item_makro['name'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_makro['value'] . ' ' . $item_makro['satuan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_makro['kesimpulan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_makro['nilai_normal'] . '</td>';
                                                     echo '</tr>';
                                                 }
                                                 ?>
-                                                <tr>
-                                                    <th class="text-center" scope="row"><b>B</b></th>
-                                                    <td colspan="3"><b>Mikroskopik</b></td>
-                                                </tr>
                                                 <?php
                                                 $hitungMikroskopik = json_decode($lab['mikroskopik'], true);
-
-                                                // Generate table rows based on JSON data
                                                 foreach ($hitungMikroskopik as $key => $item_mikro) {
                                                     echo '<tr>';
-                                                    echo '<th class="text-center" scope="row">-</th>';
-                                                    echo '<td style="padding-left:50px">' . $item_mikro['name'] . '</td>';
-                                                    echo '<td>' . $item_mikro['value'] . ' ' . $item_mikro['satuan'] . '</td>';
-                                                    echo '<td>' . $item_mikro['kesimpulan'] . '</td>';
-                                                    echo '<td>' . $item_mikro['nilai_normal'] . '</td>';
+                                                    echo '<th class="text-center" scope="row" style="padding:4px; border:none;">-</th>';
+                                                    echo '<td style="padding-left:30px; padding:4px; border:none;">' . $item_mikro['name'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_mikro['value'] . ' ' . $item_mikro['satuan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_mikro['kesimpulan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_mikro['nilai_normal'] . '</td>';
                                                     echo '</tr>';
                                                 }
                                                 ?>
-                                                <tr>
-                                                    <th class="text-center" scope="row"><b>C</b></th>
-                                                    <td colspan="3"><b>Sedimen Urine</b></td>
-                                                </tr>
                                                 <?php
                                                 $hitungSedimen = json_decode($lab['sedimen_urine'], true);
-
-                                                // Generate table rows based on JSON data
                                                 foreach ($hitungSedimen as $key => $item_sedimen) {
                                                     echo '<tr>';
-                                                    echo '<th class="text-center" scope="row">-</th>';
-                                                    echo '<td style="padding-left:50px">' . $item_sedimen['name'] . '</td>';
-                                                    echo '<td>' . $item_sedimen['value'] . ' ' . $item_sedimen['satuan'] . '</td>';
-                                                    echo '<td>' . $item_sedimen['kesimpulan'] . '</td>';
-                                                    echo '<td>' . $item_sedimen['nilai_normal'] . '</td>';
+                                                    echo '<th class="text-center" scope="row" style="padding:4px; border:none;">-</th>';
+                                                    echo '<td style="padding-left:30px; padding:4px; border:none;">' . $item_sedimen['name'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_sedimen['value'] . ' ' . $item_sedimen['satuan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_sedimen['kesimpulan'] . '</td>';
+                                                    echo '<td style="padding:4px; border:none;">' . $item_sedimen['nilai_normal'] . '</td>';
                                                     echo '</tr>';
                                                 }
                                                 ?>
                                             </tbody>
                                         </table>
+                                        <style>
+                                            #hematologiTable th,
+                                            #hematologiTable td {
+                                                padding: 4px !important;
+                                                margin: 0 !important;
+                                                border: none !important;
+                                                vertical-align: middle !important;
+                                            }
+
+                                            #hematologiTable thead th {
+                                                border-bottom: 2px solid #dee2e6 !important;
+                                            }
+
+                                            #hematologiTable {
+                                                border-collapse: collapse !important;
+                                                margin-bottom: 0 !important;
+                                            }
+                                        </style>
                                         <hr style="border: black 1px solid;">
-                                        <div class="row mt-4">
+                                        <div class="row">
                                             <!-- Kolom Penanggung Jawab -->
-                                            <div class="col-sm-6 text-center d-flex flex-column align-items-center">
-                                                <h6>Penanggung Jawab</h6>
-                                                <img src="<?= base_url('assets/img/bar/drAmel.png') ?>" height="100px">
-                                                <h6 class="mt-3">dr. Amelia Rachmiwatie, Sp.PK, M.Kes</h6>
+                                            <div class="col-sm-6 text-center d-flex flex-column align-items-center"
+                                                style="font-size:12px;">
+                                                <h6 style="font-size:12px;">Penanggung Jawab</h6>
+                                                <img src="<?= base_url('assets/img/bar/drAmel.png') ?>" height="50px">
+                                                <h6 class="" style="font-size:12px;">dr. Amelia Rachmiwatie, Sp.PK,
+                                                    M.Kes</h6>
                                             </div>
 
                                             <!-- Kolom Analis -->
-                                            <div class="col-sm-6 text-center d-flex flex-column align-items-center">
-                                                <h6>Analis</h6>
-                                                <img src="<?= base_url('assets/img/bar/fajriah.png') ?>" height="100px">
-                                                <h6 class="mt-3">Fajriah Nurjayanti, Amd.A.K.</h6>
-                                                <h6 class="pb-0 mt-1">
+                                            <div class="col-sm-6 text-center d-flex flex-column align-items-center"
+                                                style="font-size:12px;">
+                                                <h6 style="font-size:12px;">Analis</h6>
+                                                <img src="<?= base_url('assets/img/bar/fajriah.png') ?>" height="50px">
+                                                <h6 class="" style="font-size:12px;">Fajriah Nurjayanti, Amd.A.K. <br>
                                                     <?php
                                                     $date = new DateTime($lab['tgl_mcu']);
                                                     echo date_format($date, 'd-m-Y');
@@ -270,22 +292,72 @@
                 jsPDF: {
                     orientation: 'portrait',
                     unit: 'mm',
-                    format: 'A3', // Mengubah ukuran kertas menjadi A3
+                    format: 'a4',
                     compressPDF: true
                 },
                 pagebreak: {
-                    mode: ['css', 'legacy'], // Aktifkan page break berdasarkan CSS
-                    before: '.break-before', // Elemen sebelum page break
-                    after: '.break-after', // Elemen setelah page break
-                    avoid: '.no-break' // Elemen yang harus dihindari untuk page break
+                    mode: ['css', 'legacy'],
+                    before: '.break-before',
+                    after: '.break-after',
+                    avoid: '.no-break'
                 }
             };
 
             await html2pdf().set(options).from(element).save();
         } else {
-            console.error('Library html2pdf.js tidak tersedia.');
-            alert('Export PDF gagal! Pastikan koneksi internet aktif.');
+            // Fallback: open print dialog if html2pdf is not available
+            var printContents = element.innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+            location.reload();
         }
+    });
+</script>
+
+<script>
+    document.getElementById('printPage').addEventListener('click', function () {
+        // Print only the content inside 'contentToPrint' with all CSS
+        var printContents = document.getElementById('contentToPrint').innerHTML;
+        var printWindow = window.open('', '', 'height=800,width=1000');
+        // Get all stylesheets
+        var styles = '';
+        Array.from(document.styleSheets).forEach(function (sheet) {
+            try {
+                if (sheet.href) {
+                    styles += '<link rel="stylesheet" href="' + sheet.href + '">';
+                } else if (sheet.ownerNode && sheet.ownerNode.tagName === 'STYLE') {
+                    styles += '<style>' + sheet.ownerNode.innerHTML + '</style>';
+                }
+            } catch (e) {
+                // Ignore CORS issues
+            }
+        });
+        // Add print CSS to hide header/footer options in print dialog (where supported)
+        styles += `
+            <style>
+                @media print {
+                    @page {
+                        margin: 10mm;
+                        /* Chrome/Edge: disables default header/footer */
+                        size: auto;
+                    }
+                    body {
+                        -webkit-print-color-adjust: exact;
+                        print-color-adjust: exact;
+                    }
+                }
+            </style>
+        `;
+        printWindow.document.write('<html><head><title>Print</title>' + styles + '</head><body>' + printContents + '</body></html>');
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.onload = function () {
+            // For Chrome: try to disable headers/footers by default (user can still override)
+            printWindow.print();
+            printWindow.close();
+        };
     });
 </script>
 
