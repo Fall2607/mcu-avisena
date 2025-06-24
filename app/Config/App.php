@@ -16,7 +16,18 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = BASE;
+    public string $baseURL;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https://' : 'http://';
+
+        // Jika pakai subfolder
+        $this->baseURL = $protocol . $host . '/mcu-avisena/';
+    }
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
